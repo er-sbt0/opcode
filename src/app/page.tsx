@@ -11,7 +11,7 @@ export default function Home() {
       <main className="grid min-h-0 flex-1 grid-cols-1 divide-y divide-border overflow-y-auto md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)_minmax(0,1.2fr)] md:divide-x md:divide-y-0 md:overflow-hidden">
         <ProblemPanel problem={containerWithMostWater} />
         <EditorPanel problem={containerWithMostWater} />
-        <VizPanel />
+        <VizPanel problem={containerWithMostWater} />
       </main>
     </div>
   );

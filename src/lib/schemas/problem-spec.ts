@@ -13,7 +13,7 @@
  */
 
 import { z } from "zod";
-import type { TraceSpec } from "./trace-spec";
+import { traceSpecSchema } from "./trace-spec";
 
 // ────────────────────────────────────────────────────────────────────────────
 // Primitives
@@ -167,12 +167,12 @@ export type TraceRecipe = z.infer<typeof traceRecipeSchema>;
 /**
  * How this problem gets its interactive emulation. Prefer `derived`: the visual is
  * the *trace of the reference solution executing* (roadmap principle #3), so it is
- * correct for free and scales to any generated content. The `inline` trace is typed
- * against TraceSpec but validated structurally only until Phase 2 ships its schema.
+ * correct for free and scales to any generated content. The `inline` trace is now
+ * fully validated against `traceSpecSchema` (Phase 2).
  */
 export const visualizationBindingSchema = z.discriminatedUnion("mode", [
   z.object({ mode: z.literal("ref"), traceId: z.string() }),
-  z.object({ mode: z.literal("inline"), trace: z.custom<TraceSpec>() }),
+  z.object({ mode: z.literal("inline"), trace: traceSpecSchema }),
   z.object({ mode: z.literal("derived"), recipe: traceRecipeSchema }),
 ]);
 export type VisualizationBinding = z.infer<typeof visualizationBindingSchema>;

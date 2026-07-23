@@ -101,15 +101,15 @@ knows *which* problem it's showing.
 ### Phase 2 — Visualization & emulation engine  ·  ~2 weeks
 The differentiator's engine. This is where the craft budget goes.
 
-- [ ] Define **`TraceSpec`** DSL (steps × state; primitives: array, pointers, bars, grid, graph, tree)
+- [x] Define **`TraceSpec`** DSL (steps × state; primitives: array, pointers, bars, grid, graph, tree)
 - [ ] Build generic renderers that consume it:
   - [ ] `ArrayView` + `PointerOverlay` (two-pointer, sliding-window)
-  - [ ] `BarField` / water-fill (the mockup's viz, now generic)
+  - [x] `BarField` / water-fill (the mockup's viz, now generic)
   - [ ] `GraphView` (React Flow) and `TreeView`
   - [ ] `GridView` (BFS/DFS on a grid)
-- [ ] Reusable **playback component**: play / step / scrub / per-step caption (already prototyped in the mockup)
+- [x] Reusable **playback component**: play / step / scrub / per-step caption (already prototyped in the mockup)
 - [ ] Author 3–4 problems spanning different primitives to prove genericity
-- [ ] Motion pass with Framer Motion; respect `prefers-reduced-motion`
+- [ ] Motion pass with Framer Motion; respect `prefers-reduced-motion` *(reduced-motion already respected via CSS; Framer Motion glide pass still to do)*
 
 **Ships:** any problem with a `TraceSpec` gets a beautiful interactive emulation
 for free. This is the product's soul, working.
