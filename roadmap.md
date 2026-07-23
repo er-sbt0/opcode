@@ -88,10 +88,10 @@ Turn the mockup into a real, componentized shell.
 ### Phase 1 — First vertical slice (hand-authored content)  ·  ~1 week
 One real problem, end-to-end, flowing through the *generic* engine.
 
-- [ ] Define **`ProblemSpec` v0** (statement, examples, constraints, tags, difficulty, starterCode, tests)
-- [ ] Render one problem (**Container With Most Water**) entirely from its JSON — no hardcoded copy in components
-- [ ] Wire the code editor (Monaco or CodeMirror 6) with the Python starter
-- [ ] **Pyodide in-browser run**: execute user code against sample cases → pass/fail verdict strip
+- [x] Define **`ProblemSpec` v0** (statement, examples, constraints, tags, difficulty, starterCode, tests)
+- [x] Render one problem (**Container With Most Water**) entirely from its JSON — no hardcoded copy in components
+- [x] Wire the code editor (Monaco or CodeMirror 6) with the Python starter
+- [x] **Pyodide in-browser run**: execute user code against sample cases → pass/fail verdict strip
 - [ ] Deploy
 
 **Ships:** a working, data-driven problem you can actually solve in the browser.
