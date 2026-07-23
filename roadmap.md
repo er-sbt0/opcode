@@ -77,9 +77,9 @@ MVP is reached at the end of **Phase 3**.
 ### Phase 0 — Foundation & design system  ·  ~1 week
 Turn the mockup into a real, componentized shell.
 
-- [ ] Scaffold: Next.js (App Router) + TypeScript + Tailwind + shadcn/ui
-- [ ] Design tokens from the mockup: color (light + dark), type scale, spacing, motion, radii
-- [ ] Extract mockup into real components: `TopBar`, `ProblemPanel`, `EditorPanel`, `VizPanel`, 3-column layout
+- [x] Scaffold: Next.js (App Router) + TypeScript + Tailwind + shadcn/ui
+- [x] Design tokens from the mockup: color (light + dark), type scale, spacing, motion, radii
+- [x] Extract mockup into real components: `TopBar`, `ProblemPanel`, `EditorPanel`, `VizPanel`, 3-column layout
 - [ ] Storybook for building/documenting components in isolation
 - [ ] Deploy the empty shell to Vercel — the pipeline is live from day one
 
